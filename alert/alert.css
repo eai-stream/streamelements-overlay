@@ -4,9 +4,9 @@
 @import url("https://cdn.streamelements.com/scripts/animate.min.css");
 
 :root {
-    --width: 400px;
-    --height: 100px;
-    --highlight-color: hsla(45, 100%, 50%, 1);
+    --width: {width}px;
+    --height: {height}px;
+    --highlight-color: {highlightColor};
 }
 
 *,
@@ -42,9 +42,9 @@ body {
     flex-shrink: 0;
     display: flex;
     align-items: center;
-    padding: 1rem;
-    background-color: var(--highlight-color);
+    padding: {{iconPadding}};
     border-radius: 10% 0 0 10%;
+    background: center / contain no-repeat url("https://cldup.com/k9fu9BQxYo.png"), var(--highlight-color);
 }
 
 .image-container img {
@@ -52,6 +52,7 @@ body {
     width: auto;
     max-height: 100%;
     max-width: 100%;
+    border-radius: {{iconRadius}};
 }
 
 .text-container {
